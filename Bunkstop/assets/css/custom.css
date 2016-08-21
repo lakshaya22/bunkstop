@@ -1,0 +1,17 @@
+.nice-header {
+
+    background: #ffcc01 !important;
+}
+.nice-header svg g {
+    fill: #ffcc01;
+}
+.navbar-color-primary{
+	background: #ffcc01 !important;
+}
+.nice-header .follow{
+  background: #ffcc01 !important;
+}
+.nice-header .balance div:before
+{
+  content:'';
+}
