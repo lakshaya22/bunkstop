@@ -28,6 +28,7 @@ $(document).ready(function() {
         myApp.onPageInit('login', function(page) {
             // Do something here for "about" page
             console.log("I am in login"+cartArray);
+            $("#leftsidebar").html("").css({'width':'0px'});
             $("#login-button").on("click", function(e) {
               console.log("INSIDE");
                 var username = $("#login").val();
@@ -55,10 +56,15 @@ $(document).ready(function() {
 
         });
 
-
+  myApp.onPageInit('index', function(page) {
+            // Do something here for "about" page
+            $('#cartIcon').html(cartArray.length);
+            
+        });
   myApp.onPageInit('cart', function(page) {
             // Do something here for "about" page
             console.log("I am in cart"+cartArray);
+            
             $("#cancel-button").on("click", function(e) {
                mainView.router.load({url: "index.html"});
             });
@@ -120,7 +126,7 @@ $(document).ready(function() {
       });
         });
 
-   myApp.onPageInit('tabs', function(page) {
+   myApp.onPageInit('foods', function(page) {
          
          $.ajax({
              type:"POST",
@@ -218,7 +224,7 @@ function cartRefresh(data){
           {
             total=total+dataFinalMrp[counter];
           }
-          $('#amount').text('Total Amount: '+total+" Rs");
+          $('#amount').text('Total Amount: '+total).append(' <i class="fa fa-inr" aria-hidden="true"></i>');
 
 for(var counter=0;counter<showDataOnCart.length;counter++)
           {
