@@ -7,7 +7,7 @@ db_connect();
 
 $in_user_id=20;
 $in_mobile=9410922563;
-$in_request_type=1;
+$in_request_type=$_REQUEST["requestType"];
 $in_inventory_id=$_REQUEST["inventoryId"];
 $in_units=$_REQUEST["inventoryUnits"];
 

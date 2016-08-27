@@ -8,3 +8,5 @@ var VALIDITY_PERIOD = 10;
 var CART_ARRAY="";
 var COOKIE_NAME = "username";
 var COOKIE_SCREEN_NAME = "screenName";
+var MESSAGE_SERVER  = 'http://localhost:3000';
+var isManager = true;
